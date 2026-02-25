@@ -98,7 +98,7 @@ Built to showcase frontend development skills including:
 
 ## 📬 Contact
 
-📧 hello@simonojugo.com  
+📧 hello@your email  
 GitHub · LinkedIn · Twitter/X · Calendly 
 
 ---
