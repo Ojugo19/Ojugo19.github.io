@@ -1,13 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=
- , initial-scale=1.0">
- <title>My profile</title>
- <h1> Welcome my page</h1>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name — Web Developer</title>
+
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- 
+
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <!-- Top-right navigation with list -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h1>Welcome to my page much appreciated!</h1>
+      <div class="intro-card">
+        <p>
+          Web Developer • Creative Coder • Problem Solver
+        </p>
+        <p>I craft clean, performant, and user-focused digital experiences.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="intro-card">
+         <p> I'm Simon Ojugo, a web developer — freshly graduated from Technative 
+      and ready to build impactful web experiences.<p> I thrive on turning ideas into clean,
+       responsive apps. <p>Bootcamp projects sparked my passion: 
+      from basic tools to full-featured applications with real APIs, 
+      state management, and deployment.</p>
+      <h3> Core Skills</h3>
+      <ul >
+      <li>Html: <p>defines The structure / skeleton of the page.</p></li>
+      <li>css:<p> Deployed for styling and layer designs</p></l>
+      <li>JavaScript:<p> Deployed for interactativity of the websites page</p></li> 
+      <li> Api:<p> The connector / bridge. Lets your app talk to external services or your own backend</p></li>
+      <li> React: <p>A JavaScript library for building dynamic user interfaces</p> </li>
+      </ul>
+     <p> <a href="About.html">Read more</a></p>
+      </div>
+    </section>
+
+    <section id="insights">
+      <h2>Insights</h2>
+      <div class="intro-card">
+        <p>Modern web mastery isn't memorizing syntax—it's composing <strong> </p>
+        <p>HTML 
+        skeleton + CSS style + JS behavior + API data flow </strong> 
+        </p> <p>inside  <strong>React's component 
+        Lego system </strong>so fast changes feel instant,</p>
+         <p>code stays clean, and users get magic without reloads </p>
+         <a href="Insights.html#Insights">Read More</a></p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="intro-card">
+        <p>  <ul class+="list of projects">
+          <li><strong>Web_calcalator</strong>-To introduction to UI Design,event handling and debugging</li>
+          <li><strong>To Do App</strong>-To improve Create Read Update Skills </li>
+          <li><strong> Weather App</strong>-API integration, handling asynchronous JavaScript, 
+            managing state, and creating dynamic, responsive UIs</li>
+            <a href="Insights.html#projects">Read More</a></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="intro-card">
+        <p>hello@simonojugo.com<br>GitHub · LinkedIn · Twitter/X · Calendly</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Smooth scroll + active link highlighting -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Optional: highlight active section
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks  = document.querySelectorAll('.navbar a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
