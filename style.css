@@ -1,157 +1,58 @@
-/* styles.css */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* ===== GLOBAL STYLES ===== */
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background: #0f0f0f;
-  color: #e5e5e5;
-  line-height: 1.6;
-  min-height: 100vh;
-}
-
-/* Full-screen background */
-.background {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background: url('images/profile.jpg') center center / cover no-repeat;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    to bottom,
-    rgba(15, 15, 15, 0.65) 0%,
-    rgba(15, 15, 15, 0.82) 70%,
-    rgba(15, 15, 15, 0.94) 100%
-  );
-  pointer-events: none;
-}
-
-/* Top-right Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 1.8rem 3rem;
-  background: rgba(20, 20, 20, 0.45);
-  backdrop-filter: blur(12px);
-  border-bottom-left-radius: 16px;
-  border-left: 1px solid rgba(255,255,255,0.08);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 2.8rem;
-}
-
-.navbar a {
-  color: #d4d4d4;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-  transition: all 0.28s ease;
-  position: relative;
-}
-
-.navbar a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -6px;
-  left: 0;
-  background: #60a5fa;
-  transition: width 0.28s ease;
-}
-
-.navbar a:hover {
-  color: white;
-}
-
-.navbar a:hover::after {
-  width: 100%;
-}
-
-.navbar a.active {
-  color: #60a5fa;
-}
-
-main {
-  position: relative;
-  z-index: 10;
-  padding: 9rem 2.5rem 6rem;
-  max-width: 1180px;
-  margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 section {
-  padding: 10rem 0 6rem;
-  min-height: 80vh;
+    padding-top: 80px;
 }
 
-h1 {
-  font-size: clamp(1rem, 2vw, 2rem);
-  font-weight: 70;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.2rem;
-  color: white;
+/* Fix navbar overlap */
+#home {
+    margin-top: 70px;
 }
 
-h2 {
-  font-size: 3.2rem;
-  margin-bottom: 2rem;
-  color: #a0d0ff;
+/* ===== HERO SECTION ===== */
+#home {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
 }
 
-.intro-card {
-  background: rgba(30, 30, 30, 0.55);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 20px;
-  padding: 3rem;
-  backdrop-filter: blur(12px);
-  transition: all 0.4s ease;
-  max-width: 720px;
+#home img {
+    transition: transform 0.3s ease;
 }
 
-.intro-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 70px rgba(0,0,0,0.55);
-  border-color: rgba(96, 165, 250, 0.25);
+#home img:hover {
+    transform: scale(1.05);
 }
 
-/* Mobile adjustments */
-@media (max-width: 820px) {
-  .navbar {
-    padding: 1.4rem 2rem;
-  }
+/* ===== CV SECTION ===== */
+#cv {
+    background: linear-gradient(135deg, #212529, #343a40);
+}
 
-  .navbar ul {
-    gap: 1.8rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
+/* ===== PROJECT CARDS ===== */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  main {
-    padding-top: 7rem;
-  }
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
 
-  section {
-    padding: 8rem 0 4rem;
-  }
+/* ===== CONTACT FORM ===== */
+form input,
+form textarea {
+    border-radius: 8px;
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+    border-color: #0d6efd;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    letter-spacing: 0.5px;
 }
