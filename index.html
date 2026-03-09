@@ -13,14 +13,6 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
-
-  <!--Form-->
-  <form action="https://formsubmit.co/simonojugo@email.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
 </head>
 
 <body>
@@ -75,7 +67,7 @@
       Interested in working together? Download my professional CV below.
     </p>
 
-    <a href="files/Simon-Ojugo-CV.pdf" class="btn btn-primary btn-lg px-4" download>
+    <a href="./image/Simon_cv.pdf" class="btn btn-primary btn-lg px-4" download>
       <i class="bi bi-download me-2"></i>
       Download CV
     </a>
@@ -100,8 +92,8 @@
         <div class="card shadow h-100">
           <div class="card-body">
             <h5 class="card-title">To_Do_App</h5>
-             <p>CRUD and state management.</p>
-           <p> <a href=" https://ojugo19.github.io/TO_DO_APP/">TO_DO_APP</a></p>
+            <p>CRUD and state management.</p>
+            <p><a href="https://ojugo19.github.io/TO_DO_APP/">TO_DO_APP</a></p>
           </div>
         </div>
       </div>
@@ -110,7 +102,7 @@
           <div class="card-body">
             <h5 class="card-title">Weather App</h5>
             <p>API integration and async JS.</p>
-            <a href=" https://ojugo19.github.io/weather_App/">Weather_App</a>
+            <a href="https://ojugo19.github.io/weather_App/">Weather_App</a>
           </div>
         </div>
       </div>
@@ -130,33 +122,34 @@
         </p>
 
         <div class="card shadow p-4">
-          <form>
+          <!-- Working FormSubmit.co form -->
+          <form action="https://formsubmit.co/simonojugo@gmail.com" method="POST">
 
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label class="form-label">First Name</label>
-                <input type="text" class="form-control" placeholder="Enter first name" required>
+                <input type="text" name="First Name" class="form-control" placeholder="Enter first name" required>
               </div>
 
               <div class="col-md-6 mb-3">
                 <label class="form-label">Surname</label>
-                <input type="text" class="form-control" placeholder="Enter surname" required>
+                <input type="text" name="Surname" class="form-control" placeholder="Enter surname" required>
               </div>
             </div>
 
             <div class="mb-3">
               <label class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" placeholder="Enter phone number" required>
+              <input type="tel" name="Phone" class="form-control" placeholder="Enter phone number" required>
             </div>
 
             <div class="mb-3">
               <label class="form-label">Email Address</label>
-              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <input type="email" name="Email" class="form-control" placeholder="Enter email address" required>
             </div>
 
             <div class="mb-4">
               <label class="form-label">Message</label>
-              <textarea class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+              <textarea name="Message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
             </div>
 
             <div class="text-center">
@@ -180,9 +173,6 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom JS -->
-<script src="server.js"></script>
 
 </body>
 </html>
